@@ -1,0 +1,11 @@
+
+<button routerLink="/article">Redirect</button>
+<button (click)="addUserData()">add</button>
+<div>User List</div>
+<div class="card" *ngFor="let user of users">
+    <div (click)="getUserData(user.id)">
+        <span>{{user.id}}</span> - <span>{{user.title}}</span>
+    </div>
+    <button (click)="editUserData(user.id)">edit</button>
+    <button (click)="deleteUserData(user.id)">delete</button>
+</div>
